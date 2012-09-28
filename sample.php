@@ -1,9 +1,10 @@
 <?php
 // CARE
-// USE THIS AT YOUR OWN RISK.
-// DONT USE MANY FUNCTION CALLS AT ONCE
-// YOU SHOULD CACHE THE RESPONSE
-// YOUR IP COULD BE TEMP.-BANNED IF YOU CALL MORE THEN 5 FUNCTIONS IN A SECOND
+// USE THIS AT YOUR OWN RISK!
+// * DONT USE MANY FUNCTION CALLS AT ONCE
+// * YOU SHOULD CACHE THE RESPONSE
+// * YOUR IP COULD BE TEMP.-BANNED IF YOU CALL MORE THEN 5 FUNCTIONS IN A SECOND
+exit;
 
 require_once( 'lib/hon.php' );
 
@@ -19,6 +20,7 @@ $myMatesId = hon::get()->nick2id( array( 'nickname[0]' => 'riyuk' ) );
 // needs to be at least 3 chars
 $mySearchRequest = hon::get()->autocompleteNicks( array( 'nickname' => 'riyuk' ) );
 
+// Since you're authed you can do "self" for your Account-Id
 $allMyStats = hon::get()->get_all_stats( array( 'account_id[0]' => 'self' ) );
 
 $allMyBuddysAccountStats = hon::get()->get_all_stats( array( 'account_id[0]' => 355466 ) );
